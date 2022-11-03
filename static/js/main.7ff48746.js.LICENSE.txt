@@ -1,13 +1,4 @@
 /**
- * 
- *
- * All Rights Reserved (c) 2022 Rami Al-Saadi.
- *
- * 
- */
-
-
-/**
  * @license React
  * react-dom.production.min.js
  *
