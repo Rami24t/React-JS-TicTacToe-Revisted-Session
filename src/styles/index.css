@@ -19,6 +19,9 @@ html, body {
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
   gap: 0.5vw;
   transform: skewX(1deg);
+  	transform-style: preserve-3d;
+	transform: rotate3d(-.1, .2, -.035, 7deg)	rotate(90deg) translateZ(10vw);
+  filter: blur(0.5px);
 }
 
 .square {
@@ -162,7 +165,7 @@ text-shadow: -0.15vw -0.1vw 0.2vw rgba(0, 255, 115, 0.902);
     font-size: max(4vw,1rem);
   }
   .game section{
-    max-width: 1200px;
+    max-width: 1500px;
     margin: auto;
     justify-content: space-around;
   }
