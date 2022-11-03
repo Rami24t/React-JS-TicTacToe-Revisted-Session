@@ -8,28 +8,32 @@ export default function ContextProvider({ children }) {
       case "reset":
         return {
           ...prevState,
+          winner: null,
           player: "X",
           board: [null, null, null, null, null, null, null, null, null],
           moves: [],
         };
 
       case "goTo":
+        console.log(action.move.winner);
         prevState.moves.length = action.idx + 1;
         return {
           ...prevState,
           board: action.move.board,
           player: action.move.prevPlayer == "X" ? "O" : "X",
+          winner: action.move.winner
         };
       case "clicked":
+        if(prevState.winner || prevState.board[action.number])
+          return prevState;
         prevState.board[action.number] = prevState.player;
         prevState.moves.push({
           prevPlayer: prevState.player,
-          board: prevState.board,
+          board: [...prevState.board],
+          winner: prevState.getWinner(),
         });
-        if (prevState.checkWin(prevState.board) !== false)
-          alert(prevState.player + " won, end game");
+        prevState .winner = prevState.getWinner();
         // continue game
-        else return { ...prevState, player: prevState.nextPlayer() };
         return { ...prevState, player: prevState.nextPlayer() };
       default:
         break;
@@ -38,18 +42,12 @@ export default function ContextProvider({ children }) {
   };
 
   const [state, dispatch] = useReducer(reducer, {
+    winner: null,
     player: "X",
-    board: [null, null, null, null, null, null, null, null, null],
-    moves: [
-      // {
-      // prevPlayer: 'O',
-      // board: [
-      // null,null,'null',
-      // null,null,null,
-      // null,null,null
-      // ]
-      // },
-    ],
+    board: [null, null, null,
+            null, null, null,
+            null, null, null],
+    moves: [],
     nextPlayer: function () {
       return this.player == "X" ? "O" : "X";
     },
@@ -85,9 +83,14 @@ export default function ContextProvider({ children }) {
         return state.player;
       else return false;
     },
+    getWinner(){
+      return this.checkWin(this.board) ? this.player : ((this.board.filter(sq=>sq===null)).length === 0 ? 'no one' : null)
+    }
   });
 
   return (
     <Context.Provider value={{ state, dispatch }}>{children}</Context.Provider>
   );
 }
+
+// By Rami Al-Saadi in Nov 3 2022 &copy;

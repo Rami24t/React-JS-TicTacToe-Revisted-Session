@@ -8,7 +8,7 @@ export default function Board() {
   const renderSquare = (i) => {
     return <Square number={i} playerLetter={state.board[i]} />;
   };
-  const status = "Next player: " + state.player;
+  const status = state.winner === 'no one'? 'Game ended with no winners' : state.winner ? "Player " + state.winner + " won!!!" : "Next player: " + state.player;
 
   return (
     <React.Fragment>

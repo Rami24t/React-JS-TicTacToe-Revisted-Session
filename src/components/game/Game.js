@@ -7,17 +7,17 @@ function Game() {
   const { state, dispatch } = useContext(Context);
 
   return (
-    <article className="game container mt-5">
-      <section className="row">
-        <div className="col-sm-8 game-board">
+    <article className="game">
+      <section className="">
+        <div className="game-board">
           <Board />
         </div>
-        <div className="col-sm-4 game-info">
+        <div className="game-info">
           <p className="h2">{/* status */}</p>
-          <ul className="nav nav-pills flex-column">
+          <ul className="buttonList">
             <li>
               <button onClick={() => dispatch({ type: "reset" })}>
-                Start the Game
+                {state.moves.length<=0 ? 'Start the' : 'Restart'} Game
               </button>
             </li>
             {state.moves.map((move, idx) => (
