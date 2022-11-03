@@ -1,6 +1,6 @@
 # React Tic Tac Toe challenge Revisit
 
-## A Tic Tac Toe Game App from yesterday revisited to help out some colleagues. 
+## The Tic Tac Toe Game App from yesterday revisited to help out some colleagues. 
 ## Designed and coded by me on Nov 2022 mainly using Javascript/Ecmascript, React.js, JSX, CSS3 HTML5...
 
 ## Live version: https://rami24t.github.io/React-JS-TicTacToe-Revisted-Session/
