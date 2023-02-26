@@ -1,0 +1,109 @@
+{
+  "record": {
+    "winner": "O",
+    "player": "X",
+    "board": [
+      "O",
+      "X",
+      null,
+      "X",
+      "O",
+      null,
+      null,
+      "X",
+      "O"
+    ],
+    "moves": [
+      {
+        "prevPlayer": "X",
+        "board": [
+          null,
+          "X",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "winner": null
+      },
+      {
+        "prevPlayer": "O",
+        "board": [
+          "O",
+          "X",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "winner": null
+      },
+      {
+        "prevPlayer": "X",
+        "board": [
+          "O",
+          "X",
+          null,
+          "X",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "winner": null
+      },
+      {
+        "prevPlayer": "O",
+        "board": [
+          "O",
+          "X",
+          null,
+          "X",
+          "O",
+          null,
+          null,
+          null,
+          null
+        ],
+        "winner": null
+      },
+      {
+        "prevPlayer": "X",
+        "board": [
+          "O",
+          "X",
+          null,
+          "X",
+          "O",
+          null,
+          null,
+          "X",
+          null
+        ],
+        "winner": null
+      },
+      {
+        "prevPlayer": "O",
+        "board": [
+          "O",
+          "X",
+          null,
+          "X",
+          "O",
+          null,
+          null,
+          "X",
+          "O"
+        ],
+        "winner": "O"
+      }
+    ]
+  }
+}

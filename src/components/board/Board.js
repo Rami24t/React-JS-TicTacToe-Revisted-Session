@@ -1,14 +1,19 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Square from "../square/Square";
 import { Context } from "../../utils/Context";
 
 export default function Board() {
   const { state } = useContext(Context);
 
+  useEffect(()=>{
+    console.log(state.updtUI);
+    state.updtUI();
+  },[])
+
   const renderSquare = (i) => {
-    return <Square number={i} playerLetter={state.board[i]} />;
+    return <Square number={i} playerLetter={state.board && state?.board[i]} />;
   };
-  const status = state.winner === 'no one'? 'Game ended with no winners' : state.winner ? "Player " + state.winner + " won!!!" : "Next player: " + state.player;
+  const status = state?.winner === 'no one'? 'No winners' : state?.winner ? "Player " + state?.winner + " won!!!" : "Next player: " + state?.player;
 
   return (
     <React.Fragment>
