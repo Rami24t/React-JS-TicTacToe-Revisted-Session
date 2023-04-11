@@ -1,6 +1,6 @@
 # React Tic Tac Toe challenge Revisit
 
-## Tic Tac Toe Game App
+## A 2 player Tic Tac Toe Game App with a multiple undo functionality.
 ## Designed and coded on Nov 2022 mainly using JavaScript/Ecmascript, React.js, JSX, CSS3, HTML5...
 
 ## Live version: https://rami24t.github.io/React-JS-TicTacToe-Revisted-Session/
