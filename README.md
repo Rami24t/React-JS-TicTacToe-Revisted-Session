@@ -13,5 +13,4 @@
 - Display the information when a player wins. The players should have the option to restart the game.
 
 -   Images for reference:
-    ![mock-up1](mock-up1.png)
     ![mock-up2](mock-up2.png)
