@@ -12,5 +12,5 @@
 - keep alternating the moves between the 2 players until one of the players has drawn a row of three of their symbols or until the board is full and nobody wins.
 - Display the information when a player wins. The players should have the option to restart the game.
 
--   Images for reference:
+-   Image for reference:
     ![mock-up2](mock-up2.png)
