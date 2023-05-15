@@ -5,6 +5,11 @@
 
 ## Live version: https://rami24t.github.io/React-JS-TicTacToe-Revisted-Session/
 
+## Snapshot
+
+![TicTacToe](https://github.com/Rami24t/React-JS-TicTacToe-Revisted-Session/assets/103028944/908f17eb-ded5-4ace-b7d5-5c6778c402ca)
+
+
 ### Challenge Instructions:
 
 #### Create a Tic-Tac-Toe game
